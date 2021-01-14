@@ -11,7 +11,10 @@ body {
   display: flex;
   justify-content: space-evenly;
 }
-
+.app__title {
+  font-family: monospace;
+  font-size: 44px;
+}
 .app__dropdown {
   background-color: white;
 }
@@ -53,5 +56,12 @@ body {
 @media (max-width: 990px) {
   .app {
     flex-direction: column;
+  }
+  .app__header {
+    font-size: 10px;
+  }
+  .app__title {
+    font-family: monospace;
+    font-size: 23px;
   }
 }

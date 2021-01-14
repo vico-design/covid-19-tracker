@@ -1,5 +1,6 @@
 import React from "react";
 import { Card, CardContent, Typography } from "@material-ui/core";
+
 import "./styles.css";
 
 const InfoBox = ({ title, cases, active, isRed, isGrey, total, ...props }) => {
@@ -11,19 +12,16 @@ const InfoBox = ({ title, cases, active, isRed, isGrey, total, ...props }) => {
       onClick={props.onClick}
     >
       <CardContent>
-        <Typography className="infoBox__title" color="textSecondary">
-          {title}
-        </Typography>
-        <h2
+        <Typography className="infoBox__title">{title}</Typography>
+        <Typography
           className={`infoBox__cases ${!isRed && "infoBox__cases--green"} ${
             isGrey && "infoBox__cases--grey"
           }`}
+          variant="h4"
         >
           {cases}
-        </h2>
-        <Typography className="infoBox__total" color="textSecondary">
-          {total} Total
         </Typography>
+        <Typography className="infoBox__total">{total} Total</Typography>
       </CardContent>
     </Card>
   );
